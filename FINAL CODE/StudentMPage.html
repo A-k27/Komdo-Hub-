@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Class Marterials</title>
+</head>
+<body>
+<style>
+   .class{
+       background-color: #236423;
+       color: white;
+       border: 2px solid black;
+       margin: 20px;
+       padding: 20px;
+       text-align: center;
+       font-size: 15px;
+
+
+   }
+</style>
+<div Class="class">
+   <h1> Class Materials </h1>
+</div>
+
+   <!-- would show materials uploaded by teacher -->
+<p> no materials available right now </p>
+
+<p id = "out"></p>
+<script src="index.js"></script>
+
+<div>
+   <!-- thakes user back to classroom -->
+   <button Id="back" class="back">back</button>
+   <style>
+       .back{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: 4%;
+
+           position: absolute;
+           right: 0;
+           bottom: 1%;
+
+       }
+   </style>
+</div>
+<div>
+   <!-- adds function to button -->
+<script>
+   const back = document.getElementById("back");
+   back.addEventListener("click", function() {
+       alert("you are going back to the classroom ");
+       window.location.href = 'Classroom.html'
+   });
+
+</script>
+
+</div>
+</body>
+</html>
+

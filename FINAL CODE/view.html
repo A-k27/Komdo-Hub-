@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>view</title>
+</head>
+<body>
+<style>
+   .class{
+   background-color: #236423;
+   color: white;
+   border: 2px solid black;
+   margin: 20px;
+   padding: 20px;
+   text-align: center;
+   font-size: 15px;
+
+
+   }
+</style>
+<div Class="class">
+   <h1> View Assigments </h1>
+   <p>view studnets submitted assigemnt</p>
+</div>
+<div>
+   <p> no Assignments submitted</p>
+   <!-- should have shown the which student had uploaded their assignments -->
+</div>
+   <!-- takes teacher back to aggigment page-->
+   <button Id="back" class="back">back</button>
+   <style>
+       .back{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: 4%;
+
+           position: absolute;
+           right: 0;
+           bottom: 1%;
+
+       }
+   </style>
+
+<script>
+   const back = document.getElementById("back");
+   back.addEventListener("click", function() {
+       alert("you are going back to the classroom ");
+       window.location.href = 'TeachAssig.html'
+   });
+</script>
+
+
+</body>
+</html>

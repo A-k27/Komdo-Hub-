@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Message Input</title>
+    
+</head>
+
+<body>
+    <h2>Komdo Hub Messenger</h2>
+    <form> <!-- asking them who they want to send a message to-->
+        <label for="question">Question</label>
+        <input type="text" id="question" placeholder="Who are you sending a message to? Please input their username" required>
+        <br> <!-- means break -->
+        <input type="button" value="Submit" onclick="retrieveMessage()" class="button1">
+        <br>
+    <form> <!-- sending a message-->
+        <label for="message">Message:</label>
+        <input type="text" id="message" placeholder="Type your message here" required>
+        <br>
+        <input type="button" value="Submit" onclick="displayMessage()" class="button1">
+    </form>
+    <div id="messageBox"></div>
+
+    <script>
+        
+        function displayMessage() { 
+            // console.log("HTML user1 in displayMessage", getUser()); //calls get user so the username gets displayed
+    
+            var message = document.getElementById("message").value;
+            var messageBox = document.getElementById("messageBox");
+            var existingContent = messageBox.innerHTML;
+            messageBox.innerHTML = "<p>" + getUser() + ": " + message + "</p>" + existingContent; //outputs the message yay
+            document.getElementById("message").value = ""; //resets the message box 
+            messageBox.classList.add("message-background"); //makes the background green
+
+            var messages = JSON.parse(localStorage.getItem('messages')) || [];
+            messages.push({ user: getUser(), message: message, for: question}); //puts username and their message into an array
+            localStorage.setItem('messages', JSON.stringify(messages));
+            console.log(JSON.parse(localStorage.getItem('messages')))
+
+        function retrieveMessage() { //getting the messages for the person they want to talk to
+            JSON.parse(localStorage.getItem('messages'))
+            var usernameToDisplay = 'question'; // this is the input to the who they want to talk to
+            var filteredMessages = messages.filter(function (msg) {
+                messageBox.innerHTML = "<p>" + filteredMessages;
+                return msg.user === usernameToDisplay;
+    });
+       
+
+        }
+        }
+        
+    </script>
+
+    <style>
+        body {
+            font-family: 'Gill Sans Nova', sans-serif;
+            font-size: 15px;
+        }
+
+        #messageBox {
+            font-family: 'Gill Sans Nova', sans-serif;
+            font-size: 15px;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #779e62;
+        }
+
+        .button1:hover {
+            background-color: #779e62;
+            color: white;
+        }
+        .message-background {
+            background-color: #779e62;
+            display: inline-block;
+        }
+       
+        
+    </style>
+</body>
+<script src="messenger.js"> getUser(); 
+</script>
+</html>
+<!-- references: https://catalins.tech/store-array-in-localstorage/ + https://www.freecodecamp.org/news/how-to-store-objects-or-arrays-in-browser-local-storage/-->

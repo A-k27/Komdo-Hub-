@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Student should be able to (have buttons for) joining classes, submitting/viewing work, public and private library and the message thing, customise their profile-->
+<html>
+
+<form id="studentregistrationform">
+    <h1 class="textstyle">Komodo Hub: Registration Page</h1>
+    <!--Input Boxes-->
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <label for="schoolName">School Name:</label>
+    <input type="text" id="schoolName" name="schoolName">
+    <label for="schoolCode">School Code:</label>
+    <input type="text" id="schoolCode" name="schoolCode">
+    <!--Button to confirm registration-->
+    <button type="button" id="registerButton">Register</button>
+
+    <!--Alert saying registration is complete-->
+    <script>
+        const Profile = document.getElementById("registerButton");
+        Profile.addEventListener("click", function () {
+            alert("Registration Success!");
+            window.location.href = 'Homepage.html';
+        });
+    </script>
+
+</form>
+<!--Styles-->
+<style>
+    body, input, label, button {
+        font-family: 'Gill Sans Nova';
+        font-size: 15px;
+    }
+
+    input:focus + label {
+        font-family: 'Gill Sans Nova';
+        font-size: 15px;
+    }
+
+    .textstyle {
+        font-family: 'Gill Sans Nova';
+        font-size: 15px;
+    }
+
+    #registerButton {
+        background-color: white;
+        color: black;
+        border: 2px solid #779e62;
+    }
+
+    #registerButton:hover {
+        background-color: #779e62;
+        color: white;
+    }
+</style>
+<!--Links js file?-->
+<script src="registration.js"></script>
+
+</html>

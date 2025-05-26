@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+<head>
+    <h1 class="textstyle">Komodo Hub: Feedback Page</h1> <!-- title of page-->
+    <style>
+        body {
+        font-family: 'Gill Sans Nova';
+        marigin:20px;
+        background-color: #779e62;
+		font-size: 15px;
+       
+        }
+<
+        #feedbackForm{
+        max-width: 600px;
+        margin:auto
+        background-color: #779e62;
+      }
+        }
+
+
+        label{
+        display: block;
+        margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+
+<body>
+<!-- form element with atrribute 'id' set to 'feedbacks' allowing the user to input-->
+    <form id="feedbacks">
+        <label for="studentName">Student's Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+<!-- labels defined for students name, class and also feedback -->
+        <label for="Class">Class:</label>
+        <input type="text" id="Class" name="Class" required>
+
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="3" required></textarea>
+<!-- submit button-->
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+
+
+    <script>
+        function submitFeedback() {
+            var studentName = document.getElementById("studentName").value;
+            //gets value entered in input field for each id
+            var studentClass = document.getElementById("Class").value;
+            var feedback = document.getElementById("feedback").value;
+            //alert displayed
+            alert("Feedback Provided!");
+           
+        }
+    </script>
+</body>
+
+
+</html>
+
+
+

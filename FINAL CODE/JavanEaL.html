@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content=" "width = device-width, initial-scale=1.0>
+<title>Student Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <img src="/Images/menu-icon.png" class="menu-icon" onclick="openmenu()">
+    <div class="menu-box" id="menu">
+        <div class="right-links">
+            <a href="#">ACCOUNT</a>
+            <img src="/Images/Close-icon.png" onclick="closemenu()">
+        </div>
+        <div class="menu-links">
+            <a href="StudentLibrary.html">Home</a>
+            <a href="SumTigersL.html">Sumatran Tigers</a>
+            <a href="JavanRhL.html">Javan Rhinoceros</a>
+            <a href="BaliMyL.html">Bali Mynas</a>
+            <a href="JavanEaL.html">Javan Eagles</a>
+            <a href="TarsiusL.html">Tarsius</a>
+            <a href="CelebesL.html">Celebes Crested Macaques</a>
+        </div>
+    </div>
+    <h1 style="text-align:center;"><ins>THE JAVAN EAGLES</ins></h1>
+    <img src="/Images/javanEagle.jfif" height=700 width= 1300 class = "imgCentre" >
+<h2><ins>Status & Conservation</ins></h2>
+<br>
+ <p>It is one of the rarest raptors. Due to ongoing habitat loss, small population size, limited range and hunting in some areas, it is evaluated as Endangered on the IUCN Red List of Threatened Species.</p>
+<br>
+ <p>In February 2012, there were only around 325 pairs of Javan hawk-eagles living in the wild, mainly in Malangbong, West Java and some in East Java. In Central Java, Mount Merapi has been deforested by eruptions and Dieng Plateau has been deforested by agriculture. The adaptation of the bird is very difficult due to their preference for Rasamala trees and Javanese rats for their diet. Ideally the population should be 1,450 pairs and without conservation the eagle is predicted to go extinct by 2025.</p>
+<br>
+<h2><ins>Behaviour</ins></h2>
+<br>
+<p> The Javan hawk-eagle is believed to be monogamous. The female usually lays one egg in a nest high on top of a forest tree. The diet consists mainly of birds, lizards, fruit bats and mammals. </p>
+<br>
+</div>
+
+<script>
+var menu = document.getElementById("menu");
+function closemenu(){
+    menu.style.top = "-100vh";
+}
+function openmenu(){
+    menu.style.top = "17%";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!--Teacher Registration Page -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Registration</title>
+</head>
+<body>
+    <h1>Teacher Registration Page</h1>
+    <form id="teacherRegistrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="schoolName">School Name:</label>
+        <input type="text" id="schoolName" required><br>
+
+        <label for="schoolCode">School Code:</label>
+        <input type="text" id="schoolCode" required><br>
+
+        <button type="button" id="teacherRegisterButton">Register</button>
+<!-- Back button -->
+        <a href="Homepage.html">Back</a>
+    </form>
+
+    <script>
+        const teachers = [];
+
+        function createTeacher(username, password, email, schoolName, schoolCode) {
+            const teacher = { username, password, email, schoolName, schoolCode };
+            teachers.push(teacher);
+            localStorage.setItem('teacherLogins', JSON.stringify(teachers));
+        }
+
+        function getTeacher(username, password, email, schoolName, schoolCode) {
+            const inputTeacher = { username, password, email, schoolName, schoolCode };
+            const storedTeachers = JSON.parse(localStorage.getItem('teacherLogins'));
+
+            if (Array.isArray(storedTeachers)) {
+                let found = false;
+                for (const storedTeacher of storedTeachers) {
+                    if (
+                        storedTeacher.username === inputTeacher.username &&
+                        storedTeacher.password === inputTeacher.password &&
+                        storedTeacher.email === inputTeacher.email &&
+                        storedTeacher.schoolName === inputTeacher.schoolName &&
+                        storedTeacher.schoolCode === inputTeacher.schoolCode
+                    ) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    alert("Welcome Teacher!");
+                    window.location.href = 'TeacherDashboard.html';
+                } else {
+                    alert("Your details are incorrect");
+                }
+            }
+        }
+
+        document.getElementById('teacherRegisterButton').addEventListener('click', function () {
+            alert("Registration Success!");
+            window.location.href = 'Homepage.html';
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            const schoolName = document.getElementById('schoolName').value;
+            const schoolCode = document.getElementById('schoolCode').value;
+
+            createTeacher(username, password, email, schoolName, schoolCode);
+        });
+    </script>
+</body>
+</html>

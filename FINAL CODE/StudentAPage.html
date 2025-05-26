@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Class Assignments</title>
+</head>
+<body>
+<!--code for how title of page should look-->
+<style>
+   .class{
+       background-color: #236423;
+       color: white;
+       border: 2px solid black;
+       margin: 20px;
+       padding: 20px;
+       text-align: center;
+       font-size: 15px;
+
+
+   }
+</style>
+<div Class="class">
+   <!-- title of page -->
+   <h1> Assigments </h1>
+</div>
+<div>
+   <p>no assignments available</p>
+</div>
+<!--code from geeksforgeeks-->
+<!-- allows student to select file from their computer -->
+<form enctype="multipart/form-data">
+
+   <label for="myfile">Select a file:</label>
+
+   <input type="file" id="myfile"
+          name="myfile" multiple="multiple" />
+
+   <br /><br />
+</form>
+<div>
+   <!--upload button so student can upload their files -->
+<button Id = "Upload" class ="Upload">Upload</button>
+
+</div>
+<!-- design for back button which takes student back to classroom -->
+<div>
+   <button Id="back" class="back">back</button>
+   <style>
+       .back{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: 4%;
+
+           position: absolute;
+           right: 0;
+           bottom: 1%;
+
+       }
+   </style>
+</div>
+<!-- function for upload button and back button -->
+   <script>
+       const back = document.getElementById("back");
+       back.addEventListener("click", function() {
+           alert("you are going back to the classroom ");
+           window.location.href = 'Classroom.html'
+       });
+
+       const Upload = document.getElementById("Upload");
+       Upload.addEventListener("click", function() {
+       alert("You have successfully uploaded your work ");
+       });
+   </script>
+
+</body>
+

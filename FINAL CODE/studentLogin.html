@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <!--name of page-->
+   <title>Student Account</title>
+</head>
+<body>
+   <div class="form-group">
+      <label for="Username">UserName</label>
+      <input type="text" name="Username" class="form-control" id="Username" aria-describedby="nameHelp" placeholder="Enter Username" value="">
+   </div>
+   <div class="form-group">
+      <label for="Pass">Password</label>
+      <input type="password" name="Password" class="form-control" id="Password" aria-describedby="nameHelp" placeholder="Enter Password" value="">
+   </div>
+   <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" name="Email" class="form-control" id="Email" aria-describedby="nameHelp" placeholder="Enter Email" value="">
+   </div>
+   <div class="form-group">
+      <label for="school">School Name</label>
+      <input type="text" name="School Name" class="form-control" id="SchoolName" aria-describedby="nameHelp" placeholder="Enter School Name" value="">
+   </div>
+   <div class="form-group">
+      <label for="code">School code</label>
+      <input type="text" name="School code" class="form-control" id="subscriptionCode" aria-describedby="nameHelp" placeholder="Enter Subscription code" value="">
+   </div>
+   <button type="button" id="emailconfirmation">Email Confirmation</button>
+   <!--changed the submit to a button-->
+   <button type="button" id="submitButton">Submit</button>
+   </body>
+   <!--Styles-->
+   <style>
+      body, input, label, button {
+        font-family: 'Gill Sans Nova';
+        font-size: 15px;
+      }
+
+      input:focus + label {
+        font-family: 'Gill Sans Nova';
+        font-size: 15px;
+      
+      }
+      #submitButton {
+            background-color: white;
+            color: black;
+            border: 2px solid #779e62;
+        }
+
+      #submitButton:hover {
+            background-color: #779e62;
+            color: white;
+        }
+      #emailconfirmation {
+            background-color: white;
+            color: black;
+            border: 2px solid #779e62;
+        }
+
+      #emailconfirmation:hover {
+            background-color: #779e62;
+            color: white;
+        }
+   </style>
+   <!--Links js file?-->
+   <script src="registration.js"></script>
+   <script>
+      const publicLibraryButton = document.getElementById('emailconfirmation');
+      publicLibraryButton.addEventListener('click', function() {
+         window.location.href = 'confirmation.html';
+      });
+   </script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content=" "width = device-width, initial-scale=1.0>
+<title>Student Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <img src="/Images/menu-icon.png" class="menu-icon" onclick="openmenu()">
+    <div class="menu-box" id="menu">
+        <div class="right-links">
+            <a href="#">ACCOUNT</a>
+            <img src="/Images/Close-icon.png" onclick="closemenu()">
+        </div>
+        <div class="menu-links">
+            <a href="StudentLibrary.html">Home</a>
+            <a href="SumTigersL.html">Sumatran Tigers</a>
+            <a href="JavanRhL.html">Javan Rhinoceros</a>
+            <a href="BaliMyL.html">Bali Mynas</a>
+            <a href="JavanEaL.html">Javan Eagles</a>
+            <a href="TarsiusL.html">Tarsius</a>
+            <a href="CelebesL.html">Celebes Crested Macaques</a>
+        </div>
+    </div>
+    <h1 style="text-align:center;"><ins>THE SUMATRAN TIGER</ins></h1>
+    <img src="/Images/SumatranT.jpg" class = "imgCentre" >
+<h2><ins>Illegal Wildlife Trade</ins></h2>
+<br>
+    <p>The primary reason for the deliberate killing of most Sumatran tigers is driven by monetary gains. TRAFFIC, a global network monitoring wildlife trade, has reported that nearly 80% of estimated Sumatran tiger deaths, totaling at least 40 animals per year, result from poaching for commercial motives. </p>
+<br>
+    <p> Despite escalated conservation and protection endeavors in specific regions of Sumatra and some success in diminishing the market for tiger parts, there is limited evidence to suggest a significant decline in tiger poaching on the island since the early 1990s.</p>
+<br>
+<h2><ins>Human-Wildlife Conflict</ins></h2>
+<br>
+<p>The movement of tigers as they seek new territories, coupled with habitat destruction, compels these animals to leave protected zones and venture into areas inhabited by humans—increasing the likelihood of conflicts. Similar to other regions where tigers reside, Sumatra faces a significant issue with human-tiger conflicts. This situation has resulted in casualties and injuries among people, and tigers sometimes prey on livestock. In response, villagers might take retaliatory measures that lead to the killing of tigers.</p>
+</div>
+
+<script>
+var menu = document.getElementById("menu");
+function closemenu(){
+    menu.style.top = "-100vh";
+}
+function openmenu(){
+    menu.style.top = "17%";
+}
+</script>
+
+</body>
+</html>

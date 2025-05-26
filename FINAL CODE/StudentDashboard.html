@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--Student should be able to (have buttons for) joining classes, submitting/viewing work, public and private library and the message thing, customise their profile-->
+<html>
+<body>
+<h1 class = textstyle>Komodo Hub: Student Dashboard</h1>
+
+
+<button id="joinClassB">Join Class</button> <!--Both buttons-->
+<button id="WorkSubmit">Submit Work</button>
+<button id="PublicLibrary">Public Library</button>
+<button id="PrivateLibrary">Private Library</button>
+<button id="Messenger">Message</button>
+<button id="Profile">Customise Profile</button>
+
+
+    <!--Creates what both the buttons do-->
+<script>
+    	const joinClassB = document.getElementById("joinClassB");
+        joinClassB.addEventListener("click", function() {
+            window.location.href = 'classroom.html';
+        });
+
+
+        const WorkSubmit = document.getElementById("WorkSubmit");
+        WorkSubmit.addEventListener("click", function() {
+            window.location.href = 'StudentAPage.html';
+        });
+       
+        const PrivateLibrary = document.getElementById("PrivateLibrary");
+        PrivateLibrary.addEventListener("click", function() {
+            window.location.href = 'StudentLibrary.html';
+        });
+
+        const PublicLibrary = document.getElementById("PublicLibrary");
+        PublicLibrary.addEventListener("click", function() {
+            window.location.href = 'PublicLibrary.html';
+        });
+       
+        const Message = document.getElementById("Messenger");
+        Messenger.addEventListener("click", function() {
+            window.location.href = 'messenger.html';
+        });
+        const Profile = document.getElementById("Profile");
+        Profile.addEventListener("click", function() {
+            window.location.href = 'personal.html';
+        });
+    </script>
+   
+    <p class="textstyle">Welcome to the student dashboard!</p>
+   
+    <!--CSS to change the header font + font size -->
+    <style>
+        h1.textstyle {
+            font-family: gill sans nova
+      }
+      p.textstyle {
+            font-family: gill sans nova ; font-size: 15px
+            }
+
+
+      button {
+     
+        font-family: 'gill sans nova'; font-size: 15px; background-color: #779e62;
+      }
+       
+    </style>
+</body>
+</html>

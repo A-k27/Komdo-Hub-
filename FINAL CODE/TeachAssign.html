@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="UTF-8">
+   <title>Assigement page Teacher</title>
+</head>
+<body>
+<style>
+   .class{
+       background-color: #236423;
+       color: white;
+       border: 2px solid black;
+       margin: 20px;
+       padding: 20px;
+       text-align: center;
+       font-size: 15px;
+
+
+   }
+</style>
+<div Class="class">
+   <h1> Assigments </h1>
+   <p>Add an assigemnt</p>
+</div>
+<!--allows teacher to uplad a text file and displayes it on the page -->
+<input type="file" id = "upload1">
+<br>
+<p id="outputbx1"></p>
+<script>
+   <!-- code that allows teacher to upload the text file  for assignment page-->
+
+   let upload1 = document.getElementById('upload1');
+   let outputbx1 = document.getElementById('outputbx1');
+
+   upload1.addEventListener('change',()=>{
+       let fr = new FileReader();
+       fr.readAsText(upload1.files[0]);
+       fr.onload = function(){
+           outputbx1.innerHTML= fr.result;
+
+       };
+   });
+</script>
+
+<input type="file" id ="file" >
+<div id = "display"></div>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0; /* Remove default body margin */
+    }
+ 
+    #display {
+        width: 1180px;
+        height: 600px;
+        border: 1px solid black;
+        background-position: center;
+        background-size: cover;
+    }
+ </style>
+ 
+<!--allows teacher to upload an image and displays it on th page -->
+<script>
+   const file= document.querySelector("#file");
+   var uploaded_file = "";
+   file.addEventListener("change",function(){
+       const reader = new FileReader();
+       reader.addEventListener("load",() =>{
+           uploaded_file = reader.result;
+           document.querySelector("#display").style .backgroundImage= `url(${uploaded_file})`
+
+       })
+       reader.readAsDataURL(this.files[0]);
+   });
+</script>
+<div>
+   <!-- button that takes teacher the pages that displays the assignments uploaded by students -->
+   <button Id="View" class="View">view</button>
+   <style>
+       .View{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: 4%;
+
+           position: absolute;
+           right: 0;
+           bottom: 4%;
+
+       }
+   </style>
+</div>
+<script>
+   const View = document.getElementById("View");
+   View.addEventListener("click", function() {
+       alert("redirecting");
+       window.location.href = 'View.html'
+   });
+
+</script>
+
+   <!-- takes teacher back to classroom page-->
+   <button Id="back" class="back">back</button>
+   <style>
+       .back{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: 4%;
+
+           position: absolute;
+           right: 0;
+           bottom: 1%;
+
+       }
+   </style>
+
+
+<script>
+   const back = document.getElementById("back");
+   back.addEventListener("click", function() {
+       alert("you are going back to the classroom ");
+       window.location.href = 'TeacherClass.html'
+   });
+
+</script>
+</body>
+</html>
+

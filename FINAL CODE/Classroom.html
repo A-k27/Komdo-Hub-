@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+   <!--how the title of classroom looks  -->
+   <style>
+       .Class{
+           background-color: #236423;
+           color: white;
+           border: 2px solid black;
+           margin: 20px;
+           padding: 20px;
+           text-align: center;
+           font-size: 20px;
+
+       }
+   </style>
+
+   <title>ClassRoom</title>
+</head>
+<body>
+<!-- title for class room -->
+<div class="Class">
+   <h2> ClassRoom</h2>
+   <p>
+       Welcome to class
+   </p>
+</div>
+<!-- gives student a bit of information of class room and what its there for and who can access it  -->
+<div class= info>
+   <style>
+       .info{
+           font-size: 15px;
+           color: black;
+           background-color: white;
+           border: 1px solid black;
+           padding:10px;
+           margin: 10px;
+       }
+   </style>
+
+   <p>
+       Thank you for joining our online ClassRoom.
+   </p>
+   <p>
+      Here you will be able to access materials uploaded by our teachers. YOu will need to uses these materials to completed you assigemnts set by the teacher.
+       you will upload the assignments on the assigemnet page. If you need any more resources you should ask your teacher. if you are unable to upload your assignment then contact your teacher.
+       Your teacher has access to this page, so do not use it inappropriately.
+   </p>
+   <p>
+       I hope you will enjoy learning about each topic :)
+   </p>
+   <!-- adds an image from onlie -->
+   <img src="https://aubtu.biz/images/3s/2021/07/Joyful-Baby-Elephant-Approaches-And-Smiles-Brightly04.jpg" height="500" width="550" >
+</div>
+<div>
+   <!-- button that takes user to material page where student can access materials uploaded by teacher -->
+   <button Id="Marterials" class="Materials">Materials</button>
+   <style>
+       .Materials{
+           font-size: 15px;
+           color: #ffffff;
+           background-color: #0a3e0a;
+           width:15%;
+           height: auto;
+           top:50%;
+           right:0;
+           position: relative;
+           z-index:  1;
+       }
+   </style>
+   <!-- takes user to assigment page where user can upload there assignment  -->
+   <button Id = "Assignment" class="Assignment">Assignment</button>
+   <style>
+
+       .Assignment {
+           font-size: 15px;
+           color: white;
+           background-color: #236423;
+           width:15%;
+           height: auto;
+           top:0;
+           right:0;
+           position: relative;
+           z-index: 1;
+
+
+
+       }
+   </style>
+
+</div>
+<!-- addes the function to each button  -->
+<script>
+   const Assignment = document.getElementById("Assignment");
+   Assignment.addEventListener("click", function() {
+       alert("Welcome to assignment page");
+       window.location.href = 'StudentAPage.html'
+   });
+</script>
+<script>
+   const Marterials = document.getElementById("Marterials");
+   Marterials.addEventListener("click", function() {
+       alert("Welcome to marterials page");
+       window.location.href = 'StudentMPage.html'
+   });
+</script>
+<!-- takes student  back to dashborad-->
+<button Id="dashborad" class="dashborad">dashborad</button>
+<style>
+   .dashborad{
+       font-size: 15px;
+       color: white;
+       background-color: #236423;
+       width:100%;
+       height: auto;
+       top:0;
+       right:0;
+       position: relative;
+       z-index: 1;
+
+   }
+</style>
+
+<script>
+   const dashborad = document.getElementById("dashborad");
+   dashborad.addEventListener("click", function() {
+       alert("you are going back to the dashborad ");
+       window.location.href = 'StudentDashboard.html'
+   });
+</script>
+</body>
+</HTML>

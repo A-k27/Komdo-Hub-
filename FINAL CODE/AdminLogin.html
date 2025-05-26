@@ -1,0 +1,52 @@
+<!--Admin Login page-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Name of the page -->
+    <title>Admin Account</title>
+</head>
+<h1>Admin Login Page</h1>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="Username">UserName</label>
+            <input type="text" name="Username" class="form-control" id="Username" aria-describedby="nameHelp" placeholder="Enter Username" value="">
+        </div>
+        <div class="form-group">
+            <label for="Pass">Password</label>
+            <input type="password" name="Password" class="form-control" id="Password" aria-describedby="nameHelp" placeholder="Enter Password" value="">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="Email" class="form-control" id="Email" aria-describedby="nameHelp" placeholder="Enter Email" value="">
+        </div>
+        <!-- Submit button inside the form -->
+        <button type="button" id="submitButton">Submit</button>
+
+        <!-- Back button -->
+        <a href="KomodoHomepage.html">Back</a>
+    </form>
+
+    <!-- Styles -->
+    <style>
+        input:focus+label {
+            font-family: 'gill sans nova';
+            font-size: 15px;
+        }
+    </style>
+
+    <!-- Links js file -->
+    <script src="registration.js"></script>
+    <script>
+        const profile = document.getElementById("submitButton");
+        profile.addEventListener("click", function() {
+            alert("Login was successful");
+        });
+    </script>
+</body>
+
+</html>
+

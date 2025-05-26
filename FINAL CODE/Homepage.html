@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1, h3 {
+        text-align: center;
+        font-family: 'gill sans nova';
+        font-size: 15px;
+    }
+
+    h3 {
+        text-decoration: underline;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    button {
+        background-color: #779e62;
+        border: 2px solid #333;
+        padding: 5px 10px;
+        font-family: 'gill sans nova';
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    p {
+        font-family: 'gill sans nova';
+        font-size: 15px;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+
+    .image-container img {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .slogan {
+        text-align: center;
+        font-family: 'gill sans nova';
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .slogan-image img {
+        width: 350px;
+        height: 250px;
+    }
+</style>
+    
+<body>
+
+<h1 id="header">Homepage: Komodo Hub</h1>
+
+<div class = "image-container"> 
+<img src="https://cdn.pixabay.com/photo/2022/12/19/13/31/panda-7665674_640.jpg" alt="Panda Image" style="width: 200px; height: 150px">
+<img src="https://th.bing.com/th/id/R.c836c5f4151931074627b106792759f7?rik=OVrDHLYohIh%2fwA&riu=http%3a%2f%2fclipartmag.com%2fimages%2fanimal-kingdom-clipart-21.jpg&ehk=YTBbjd4r1nN2UpXcn%2bOx4pfliWYgXlvzBjCQRFUce1A%3d&risl=&pid=ImgRaw&r=0" alt="Safari" style="width: 200px; height: 150px">
+<img src = "https://scitechdaily.com/images/Wildlife-Conservation-Concept.jpg" alt = "Wildlife Conservation" style= "width: 200px; height: 150px">
+</div>
+
+<h3>The Vision Statement</h3> 
+
+<p>People have started to realise that this is not just the government's struggle and that communities play an important role in the initiative. Local communities are the primary stakeholders in such a conservation project, and their involvement is crucial to its success. <p>
+<p> In 2022, Yayasan Komodo (the Komodo Foundation), a not-for-profit organisation, was given a substantial amount of funds to initiate the development of a revolutionary digital platform, Komodo Hub, which is expected to be fully operational by the end of 2024. Komodo Hub to be available to citizens nationwide, from remote indigenous communities to regional towns and urban areas. They aim to involve communities and primary schools in the protection and promotion of domestic endangered species. <p>
+<p>The digital platform will provide registered and non-registered users equal opportunity to access the rich knowledge base of Indonesian endangered endemic species and get involved in a broad range of conservation programs. Komodo Hub will allow registered users to further extend its knowledge base by sharing their records of the species.
+</p>
+
+<div class="button-container">
+    <button id="loginButton">Login</button>
+    <button id="registerButton">Register</button>
+    <button id="publicLibraryButton">Public Library</button>
+</div>
+
+<div>
+<p class="slogan">Join hands and save the wildlife!</p> 
+</div>
+
+<div class="slogan-image">
+    <img src="https://www.redfoxinstitute.com/wp-content/uploads/2020/09/RFF-Homepg1.jpg" alt="Hands holding wildlife" style="width: 350px; height: 250px;">
+</div> 
+
+<script> 
+    const loginButton = document.getElementById('loginButton');
+    loginButton.addEventListener('click', function () {
+    window.location.href = 'Login.html'
+    });
+
+    const registerButton = document.getElementById('registerButton');
+    registerButton.addEventListener('click', function () {
+    window.location.href = 'Registration.html'
+    });
+
+    const publicLibraryButton = document.getElementById('publicLibraryButton');
+    publicLibraryButton.addEventListener('click', function () {
+	window.location.href = 'PublicLibrary.html'
+       
+     
+       
+    });  
+
+</script>
+
+</body>
+</html>
+

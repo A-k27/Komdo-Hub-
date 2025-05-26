@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+ <style>
+   .Class{
+     background-color: #236423;
+     color: white;
+     border: 2px solid black;
+     margin: 20px;
+     padding: 20px;
+     text-align: center;
+     font-size: 15px;
+
+
+   }
+ </style>
+
+ <title>Teacher ClassRoom</title>
+</head>
+<body>
+<div class="Class">
+ <h2> Class </h2>
+
+</div>
+<!-- positions image on page-->
+<style>
+ .image{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+ .text{
+   font-size: 15px;
+ }
+</style>
+
+<div class = text >
+ <p>As a teacher you will be able to manage accounts for students.
+ you will be able to see th e work they have uploaded, the attendance of the class and you will be able to upload materials that will be use by students.
+ materials should be uploaded in a text file. You can also upload images too.
+</p></div>
+<div class=" image">
+<!-- adds an image from onlie -->
+
+ <img src="https://www.publicdomainpictures.net/pictures/40000/velka/giraffe-portrait.jpg" height="500" width="550" >
+</div>
+<!-- creates the style of buttons to each pages -->
+<div>
+ <button class="Materials" id = "Materials">Materials</button>
+ <style>
+   .Materials{
+     font-size: 15px;
+     color: #ffffff;
+     background-color: #0a3e0a;
+     width:100%;
+     height: auto;
+     top:50%;
+     right:0;
+     position: relative;
+     z-index:  1;
+   }
+ </style>
+ <button class="Assignment" id = "Assignment">Assignment</button>
+ <style>
+
+   .Assignment {
+     font-size: 15px;
+     color: white;
+     background-color: #236423;
+     width:100%;
+     height: auto;
+     top:0;
+     right:0;
+     position: relative;
+     z-index: 1;
+
+   }
+ </style>
+</div>
+<button class="Attendence" id = "Attendence">Attendece</button>
+<style>
+
+ .Attendence {
+   font-size: 15px;
+   color: white;
+   background-color: #0a3e0a;
+   width:100%;
+   height: auto;
+   top:0;
+   right:0;
+   position: relative;
+   z-index: 1;
+
+ }
+</style>
+</div>
+<!--gives functuallity to each button created (each button tkaes user to the pages they want to go to ) -->
+<script>
+ const Materials = document.getElementById("Materials");
+ Materials.addEventListener("click", function() {
+   alert("directing you to materials page");
+   window.location.href = 'TeachMarteials.html'
+ });
+ const Assignment = document.getElementById("Assignment");
+ Assignment.addEventListener("click", function() {
+   alert("directing you to assignment page");
+   window.location.href = 'TeachAssig.html'
+ });
+ const Attendence = document.getElementById("Attendence");
+ Attendence.addEventListener("click", function() {
+   alert("directing you to attendancepage");
+   window.location.href = 'Attendance.html'
+ });
+
+</script>
+<!-- takes tecaher back to dashborad-->
+<button Id="dashborad" class="dashborad">dashborad</button>
+<style>
+ .dashborad{
+   font-size: 15px;
+   color: white;
+   background-color: #236423;
+   width:100%;
+   height: auto;
+   top:0;
+   right:0;
+   position: relative;
+   z-index: 1;
+
+ }
+</style>
+
+<script>
+ const dashborad = document.getElementById("dashborad");
+ dashborad.addEventListener("click", function() {
+   alert("you are going back to the dashborad ");
+   window.location.href = 'TeacherDashboard.html'
+ });
+</script>
+</body>
+</HTML>
+

@@ -1,0 +1,121 @@
+<html>
+
+
+<body>
+    <h1 class="textstyle">Komodo Hub: Teacher Dashboard</h1>
+
+
+    <button id="createClassB">Create Class</button>
+    <button id="CreateTask">Create Task</button>
+    <button id="PublicLibrary">Public Library</button>
+    <button id="PrivateLibrary">Private Library</button>
+    <button id="Messenger">Message</button>
+    <button id="Profile">Customise Profile</button>
+
+
+    <!-- Creates what both the buttons do -->
+    <script>
+        const PrivateLibrary = document.getElementById("PrivateLibrary");
+        PrivateLibrary.addEventListener("click", function() {
+            window.location.href = 'StudentLibrary.html';
+        });
+
+        const PublicLibrary = document.getElementById("PublicLibrary");
+        PublicLibrary.addEventListener("click", function() {
+            window.location.href = 'PublicLibrary.html';
+        });
+
+
+        const Messenger = document.getElementById("Messenger");  
+        Messenger.addEventListener("click", function () {
+            window.location.href = 'messenger.html';
+        });
+
+
+        const Profile = document.getElementById("Profile");
+        Profile.addEventListener("click", function () {
+            window.location.href = 'personal.html';
+        });
+    </script>
+
+
+    <p class="textstyle">Welcome to the Teacher dashboard!</p>
+
+
+    <form id="createclass" style="display: none;">
+        Class Name: <input type="text" id="className"><br>
+        Subject: <input type="text" id="subject"><br>
+        Year Group: <input type="text" id="YearGroup"><br>
+        <button id="submitClass">Submit</button>
+    </form>
+
+
+    <form id="createtask" style="display: none;">
+        Task Name: <input type="text" id="taskName"><br>
+        Description: <input type="text" id="taskDescription"><br>
+        Due Date: <input type="date" id="dueDate"><br>
+        <button id="submitTask">Submit</button>
+    </form>
+
+
+    <script src="script.js"></script>
+
+
+    <style>
+        h1.textstyle {
+            font-family: 'gill sans nova';
+        }
+
+
+        p.textstyle {
+            font-family: 'gill sans nova';
+            font-size: 15px;
+        }
+
+
+        button {
+            font-family: 'gill sans nova';
+            font-size: 15px;
+            background-color: #779e62;
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            //creation of task
+            const createTaskButton = document.getElementById("CreateTask");
+            createTaskButton.addEventListener("click", function () {
+                const createtask = document.getElementById("createtask");
+                createtask.style.display = "block";
+            });
+
+
+            const submitTaskButton = document.getElementById("submitTask");
+            //getting the inputs from the input fields
+            submitTaskButton.addEventListener("click", function () {
+                const taskName = document.getElementById("taskName").value;
+                const taskDescription = document.getElementById("taskDescription").value;
+                const dueDate = document.getElementById("dueDate").value;
+               //alert displayed with task created
+                alert(`Task created.`);
+            });
+            //creating classes
+            const createClassBButton = document.getElementById("createClassB");
+            createClassBButton.addEventListener("click", function () {
+                const createclass = document.getElementById("createclass");
+                createclass.style.display = "block";
+            });
+
+
+            const submitClassButton = document.getElementById("submitClass");
+            submitClassButton.addEventListener("click", function () {
+                const className = document.getElementById("className").value;
+                const subject = document.getElementById("subject").value;
+                const yearGroup = document.getElementById("YearGroup").value;
+                alert(`Class created.`);
+            });
+        });
+    </script>
+</body>
+
